@@ -27,11 +27,6 @@ Click **Use this template → Create a new repository**, name your project, then
 git clone https://github.com/YOUR_USERNAME/your-project-name.git
 cd your-project-name
 npm install
-```
-
-Then open in VS Code:
-
-```bash
 code .
 ```
 
@@ -42,6 +37,38 @@ npm run dev
 ```
 
 Open `localhost:5173` — you're ready to build.
+
+## Keeping dependencies up to date
+
+After cloning, check whether any packages have newer versions available:
+
+```bash
+npm outdated
+```
+
+To update all packages to their latest allowed versions:
+
+```bash
+npm update
+```
+
+To update a specific package to its absolute latest version (including major bumps):
+
+```bash
+npm install package-name@latest
+```
+
+For example, to update daisyUI:
+
+```bash
+npm install daisyui@latest
+```
+
+> **Note:** Major version updates (e.g. Tailwind v4 → v5) may include breaking changes. Check the package's changelog before updating.
+
+## Maintaining this template
+
+If you update the template itself — new packages, config changes, structural tweaks — commit the changes to this repo directly. Anyone using the template for a new project will get the latest version automatically when they click **Use this template**.
 
 ## Environment variables
 
